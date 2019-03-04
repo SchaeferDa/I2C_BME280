@@ -1,9 +1,6 @@
-I2C_LIB
-==
-
-> Bosch Sensortec BME280 I²C implementation for ATmega328P
-
 ## Overview
+This project is an implementation for Bosch Sensortec BME280 with I²C for Atmel ATmega328P.
+
 This is an education project. The project is still under developement.
 
 ## Current Features
