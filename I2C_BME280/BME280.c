@@ -9,18 +9,17 @@
 #include "BME280.h"
 
 int32_t BME280_compensate_T_int32(int32_t adc_T);
-int32_t compensate_temperature(int32_t rawTemp);
-boolean writeToRegister(char registerAddress, char data);
+boolean writeToRegister(unsigned char registerAddress, unsigned char data);
 void getCalibrationValues();
 
-char slaveAddressR = 0x00;
-char slaveAddressW = 0x00;
+unsigned char slaveAddressR = 0x00;
+unsigned char slaveAddressW = 0x00;
 uint16_t dig_T1;
 int16_t dig_T2;
 int16_t dig_T3;
 int32_t t_fine;
 
-void initBME280(char address)
+void initBME280(unsigned char address)
 {
 	slaveAddressR = address | 0b00000001;
 	slaveAddressW = address & 0b11111110;
@@ -41,7 +40,7 @@ void configBME280ForTemperatureMeasurement()
 	getCalibrationValues();
 }
 
-boolean writeToRegister(char registerAddress, char data)
+boolean writeToRegister(unsigned char registerAddress, unsigned char data)
 {
 	boolean state = FALSE;
 	
@@ -62,25 +61,11 @@ int32_t getTemperature()
 	
 	int32_t temp = 0;
 	
-	temp |= (readRegister(slaveAddressW, 0xFA) << 12);
-	temp |= (readRegister(slaveAddressW, 0xFB) << 4);
-	temp |= readRegister(slaveAddressW, 0xFC) >> 4;
+	temp |= ((int32_t)readRegister(slaveAddressW, 0xFA) << 12);
+	temp |= ((int32_t)readRegister(slaveAddressW, 0xFB) <<  4);
+	temp |= ((int32_t)readRegister(slaveAddressW, 0xFC) >>  4);
 	
 	return BME280_compensate_T_int32(temp);
-}
-
-int32_t getRawTemperature()
-{
-	// initiate measurement
-	writeToRegister(0xF4, 0b00100001);
-	
-	int32_t temp = 0;
-	
-	temp |= (readRegister(slaveAddressW, 0xFA) << 12);
-	temp |= (readRegister(slaveAddressW, 0xFB) << 4);
-	temp |= readRegister(slaveAddressW, 0xFC) >> 4;
-	
-	return temp;
 }
 
 void getCalibrationValues()
@@ -109,25 +94,4 @@ int32_t BME280_compensate_T_int32(int32_t adc_T)
 	T = (t_fine * 5 + 128) >> 8;
 	
 	return T;
-}// from Bosch Sensortec [GitHub]int32_t compensate_temperature(int32_t rawTemp)
-{
-	int32_t var1;
-	int32_t var2;
-	int32_t temperature;
-	int32_t temperature_min = -4000;
-	int32_t temperature_max = 8500;
-
-	var1 = (int32_t)((rawTemp / 8) - ((int32_t)dig_T1 * 2));
-	var1 = (var1 * ((int32_t)dig_T2)) / 2048;
-	var2 = (int32_t)((rawTemp / 16) - ((int32_t)dig_T1));
-	var2 = (((var2 * var2) / 4096) * ((int32_t)dig_T3)) / 16384;
-	t_fine = var1 + var2;
-	temperature = (t_fine * 5 + 128) / 256;
-
-	if (temperature < temperature_min)
-		temperature = temperature_min;
-	else if (temperature > temperature_max)
-		temperature = temperature_max;
-
-	return temperature;
 }

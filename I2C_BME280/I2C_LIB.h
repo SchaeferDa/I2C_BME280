@@ -17,12 +17,12 @@ typedef enum{FALSE, TRUE} boolean;
 /************************************************************************/
 /* prototypes of I2C-functions                                          */
 /************************************************************************/
-void initI2C(double, char);
+void initI2C(double time, char unit);
 void sendStartCondition();
 void sendStopCondition();
-boolean sendByte(char);
-char readSlave(char);
-char readRegister(char, char);
+boolean sendByte(unsigned char byte);
+unsigned char readSlave(unsigned char slaveAddress);
+unsigned char readRegister(unsigned char slaveAddress, unsigned char registerAddress);
 
 
 #endif /* I2C_LIB_H_ */

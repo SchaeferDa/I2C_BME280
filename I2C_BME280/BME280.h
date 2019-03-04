@@ -8,9 +8,8 @@
 #ifndef BME280_H_
 #define BME280_H_
 
-void initBME280(char address);
+void initBME280(unsigned char address);
 void configBME280ForTemperatureMeasurement();
 int32_t getTemperature();
-int32_t getRawTemperature();
 
 #endif /* BME280_H_ */

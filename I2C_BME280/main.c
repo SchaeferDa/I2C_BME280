@@ -12,7 +12,6 @@
 #include "I2C_LCD_LIB.h"
 #include "BME280.h"
 
-
 #define DEBUG_LED_conf() (DDRD |= (1 << PIND4))
 #define DEBUG_LED_on() PORTD |= (1 << PIND4)
 #define DEBUG_LED_off() PORTD &= ~(1 << PIND4)
@@ -20,10 +19,10 @@
 int main(void)
 {
 	// I2C-Address of BME280
-	char slaveAddressBME280 = 0b11101110;
+	unsigned char slaveAddressBME280 = 0b11101110;
 	
 	// I2C-Address of LCD1602
-	char slaveAddressLCD1602 = 0b01001110;
+	unsigned char slaveAddressLCD1602 = 0b01001110;
 	
 	initI2C(10,'u');
 	
@@ -36,19 +35,22 @@ int main(void)
 	while(1)
 	{
 		char temp[16] = {0};
-		sprintf(temp, "%ld", getTemperature());
+		sprintf(temp, "%ld", getTemperature());		
 		
-		char rawTemp[16] = {0};
-		sprintf(rawTemp, "%ld", getRawTemperature());
+		for(int i = 15; i > 2; i--)
+		{
+			temp[i] = temp[i-1];
+		}
 		
-		clearScreen();
+		temp[2] = '.';
 		
 		setCursor(0, 0);
+		
 		writeString(temp);
+		writeChar(0xDF);
+		writeString("C");
+		setCursor(3,17);
 		
-		setCursor(1, 0);
-		writeString(rawTemp);
-		
-		_delay_ms(1000);
+		_delay_ms(100);
 	}
 }
