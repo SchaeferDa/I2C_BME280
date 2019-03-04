@@ -18,4 +18,4 @@ This is an education project. The project is still under developement.
 
 ## Used Literature
 - [Datasheet Bosch Sensortec BME280](https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280-DS002.pdf)
-- [Datasheet Atmel ATmega328P](https://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061A.pdf)
+- [Datasheet Atmel ATmega328P](https://cdn-shop.adafruit.com/datasheets/ATMEGA328P.pdf)
