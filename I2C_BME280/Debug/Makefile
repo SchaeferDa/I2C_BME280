@@ -73,7 +73,7 @@ OUTPUT_FILE_DEP:= ./makedep.mk
 
 LIB_DEP+=  \
 C:/Atmel\ Studio\ 7/Projekte/I2C_BME280/I2C_BME280/libI2C_LIB.a \
-C:/Atmel\ Studio\ 7/Projekte/I2C_LCD_LIB/I2C_LCD_LIB/Debug/libI2C_LCD_LIB.a
+C:/Atmel\ Studio\ 7/Projekte/I2C_BME280/I2C_BME280/libI2C_LCD_LIB.a
 
 LINKER_SCRIPT_DEP+= 
 

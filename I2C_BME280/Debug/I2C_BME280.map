@@ -28,7 +28,7 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o) (__fp_round)
 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LIB.a(library.o)
                               main.o (initI2C)
-C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
+C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
                               main.o (initLCD)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
                               C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LIB.a(library.o) (__divsf3)
@@ -127,11 +127,11 @@ Discarded input sections
  .bss           0x00000000        0x0 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LIB.a(library.o)
  .text.readSlave
                 0x00000000       0xe0 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LIB.a(library.o)
- .text          0x00000000        0x0 C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
- .data          0x00000000        0x0 C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
- .bss           0x00000000        0x0 C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
+ .text          0x00000000        0x0 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
+ .data          0x00000000        0x0 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
+ .bss           0x00000000        0x0 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
  .text.writeChar
-                0x00000000        0x6 C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
+                0x00000000        0x6 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
@@ -296,7 +296,7 @@ LOAD main.o
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
 LOAD C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LIB.a
-LOAD C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a
+LOAD C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a
 END GROUP
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a
@@ -578,22 +578,22 @@ END GROUP
                 0x00000f60                readRegister
  .text.sendBit  0x00001068       0x48 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LIB.a(library.o)
                 0x00001068                sendBit
- .text.initLCD  0x000010b0      0x14c C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
+ .text.initLCD  0x000010b0      0x14c C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
                 0x000010b0                initLCD
  .text.sendCommand
-                0x000011fc       0x50 C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
+                0x000011fc       0x50 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
                 0x000011fc                sendCommand
  .text.sendData
-                0x0000124c       0x50 C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
+                0x0000124c       0x50 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
                 0x0000124c                sendData
  .text.setCursor
-                0x0000129c       0x12 C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
+                0x0000129c       0x12 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
                 0x0000129c                setCursor
  .text.writeString
-                0x000012ae       0x2c C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
+                0x000012ae       0x2c C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
                 0x000012ae                writeString
  .text.clearScreen
-                0x000012da       0x14 C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
+                0x000012da       0x14 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
                 0x000012da                clearScreen
  .text.avr-libc.fplib
                 0x000012ee        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
@@ -693,7 +693,7 @@ END GROUP
                 0x0080010b        0x1 BME280.o
                 0x0080010b                slaveAddressW
  .bss.savedSlaveAddress
-                0x0080010c        0x1 C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
+                0x0080010c        0x1 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
                 0x0080010c                savedSlaveAddress
  *(COMMON)
  COMMON         0x0080010d        0xa BME280.o
@@ -755,7 +755,7 @@ END GROUP
                                  0x31 (size before relaxing)
  .comment       0x00000030       0x31 main.o
  .comment       0x00000030       0x31 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LIB.a(library.o)
- .comment       0x00000030       0x31 C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
+ .comment       0x00000030       0x31 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
  .comment       0x00000030       0x31 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(sprintf.o)
  .comment       0x00000030       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
                                  0x2d (size before relaxing)
@@ -790,7 +790,7 @@ END GROUP
  .debug_aranges
                 0x00000078       0x58 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LIB.a(library.o)
  .debug_aranges
-                0x000000d0       0x50 C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
+                0x000000d0       0x50 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
 
 .debug_pubnames
  *(.debug_pubnames)
@@ -801,7 +801,7 @@ END GROUP
  .debug_info    0x000005f4      0x2d6 BME280.o
  .debug_info    0x000008ca      0x1a1 main.o
  .debug_info    0x00000a6b      0x48a C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LIB.a(library.o)
- .debug_info    0x00000ef5      0x922 C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
+ .debug_info    0x00000ef5      0x922 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
 
 .debug_abbrev   0x00000000      0xb22
  *(.debug_abbrev)
@@ -809,7 +809,7 @@ END GROUP
  .debug_abbrev  0x000005a2      0x111 BME280.o
  .debug_abbrev  0x000006b3       0xdc main.o
  .debug_abbrev  0x0000078f      0x1cc C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LIB.a(library.o)
- .debug_abbrev  0x0000095b      0x1c7 C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
+ .debug_abbrev  0x0000095b      0x1c7 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
 
 .debug_line     0x00000000      0xe2f
  *(.debug_line .debug_line.* .debug_line_end)
@@ -817,14 +817,14 @@ END GROUP
  .debug_line    0x00000133      0x296 BME280.o
  .debug_line    0x000003c9      0x1ec main.o
  .debug_line    0x000005b5      0x50f C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LIB.a(library.o)
- .debug_line    0x00000ac4      0x36b C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
+ .debug_line    0x00000ac4      0x36b C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
 
 .debug_frame    0x00000000      0x34c
  *(.debug_frame)
  .debug_frame   0x00000000      0x150 BME280.o
  .debug_frame   0x00000150       0x34 main.o
  .debug_frame   0x00000184      0x114 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LIB.a(library.o)
- .debug_frame   0x00000298       0xb4 C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
+ .debug_frame   0x00000298       0xb4 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
 
 .debug_str      0x00000000      0x779
  *(.debug_str)
@@ -835,7 +835,7 @@ END GROUP
                                 0x1df (size before relaxing)
  .debug_str     0x00000502       0xf1 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LIB.a(library.o)
                                 0x294 (size before relaxing)
- .debug_str     0x000005f3      0x186 C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
+ .debug_str     0x000005f3      0x186 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
                                 0x26f (size before relaxing)
 
 .debug_loc      0x00000000      0xaea
@@ -843,7 +843,7 @@ END GROUP
  .debug_loc     0x00000000      0x2c0 BME280.o
  .debug_loc     0x000002c0       0x47 main.o
  .debug_loc     0x00000307      0x224 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LIB.a(library.o)
- .debug_loc     0x0000052b      0x5bf C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
+ .debug_loc     0x0000052b      0x5bf C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -868,7 +868,7 @@ END GROUP
  .debug_ranges  0x00000000       0x48 BME280.o
  .debug_ranges  0x00000048       0x10 main.o
  .debug_ranges  0x00000058       0x78 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LIB.a(library.o)
- .debug_ranges  0x000000d0       0x40 C:\Atmel Studio 7\Projekte\I2C_LCD_LIB\I2C_LCD_LIB\Debug\libI2C_LCD_LIB.a(library.o)
+ .debug_ranges  0x000000d0       0x40 C:\Atmel Studio 7\Projekte\I2C_BME280\I2C_BME280\libI2C_LCD_LIB.a(library.o)
 
 .debug_macro
  *(.debug_macro)
