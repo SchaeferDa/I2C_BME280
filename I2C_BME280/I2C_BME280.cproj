@@ -84,6 +84,7 @@
       <Value>libm</Value>
       <Value>libI2C_LCD_LIB.a</Value>
       <Value>libI2C_LIB.a</Value>
+      <Value>libI2C_BME280_LIB.a</Value>
     </ListValues>
   </avrgcc.linker.libraries.Libraries>
   <avrgcc.linker.libraries.LibrarySearchPaths>
@@ -130,6 +131,7 @@
       <Value>libm</Value>
       <Value>libI2C_LCD_LIB.a</Value>
       <Value>libI2C_LIB.a</Value>
+      <Value>libI2C_BME280_LIB.a</Value>
     </ListValues>
   </avrgcc.linker.libraries.Libraries>
   <avrgcc.linker.libraries.LibrarySearchPaths>
@@ -148,12 +150,6 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="BME280.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="BME280.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="I2C_LCD_LIB.h">
       <SubType>compile</SubType>
     </Compile>

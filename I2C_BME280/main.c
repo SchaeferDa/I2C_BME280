@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include "I2C_LIB.h"
 #include "I2C_LCD_LIB.h"
-#include "BME280.h"
+#include "I2C_BME280_LIB.h"
 
 #define DEBUG_LED_conf() (DDRD |= (1 << PIND4))
 #define DEBUG_LED_on() PORTD |= (1 << PIND4)
@@ -72,7 +72,6 @@ int main(void)
 		writeString(hum);
 		writeString(" %rh");
 		*/
-		
 		
 		setCursor(3,17);
 		

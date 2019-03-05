@@ -1,5 +1,5 @@
-﻿/*
- * BME280.h
+/*
+ * I2C_BME280_LIB.h
  *
  * Created: 04.03.2019 17:29:54
  * Author: Daniel Schäfer
