@@ -28,27 +28,52 @@ int main(void)
 	
 	initLCD(slaveAddressLCD1602);
 	
-	initBME280(slaveAddressBME280);
+	BME280_init(slaveAddressBME280);
 	
-	configBME280ForTemperatureMeasurement();
+	// config BME280 in general
+	BME280_set_filter_coefficient_2();
+	BME280_set_normal_mode();
+	BME280_set_standby_time_62_5();
+	
+	// config BME280 temperature measurement
+	BME280_set_temperature_oversampling_1();
+	BME280_calibrate_temperature();
+	
+	// config BME280 pressure measurement
+	BME280_set_pressure_oversampling_1();
+	BME280_calibrate_pressure();
+	
+	//config BME280 humidity meaurement
+	BME280_set_humidity_oversampling_1();
+	BME280_calibrate_humidity();
 	
 	while(1)
 	{
 		char temp[16] = {0};
-		sprintf(temp, "%ld", getTemperature());		
+		dtostrf(BME280_get_temperature(), 5, 2, temp);
 		
-		for(int i = 15; i > 2; i--)
-		{
-			temp[i] = temp[i-1];
-		}
+		char press[16] = {0};
+		dtostrf(BME280_get_pressure()/100000, 5, 3, press);
 		
-		temp[2] = '.';
+		char hum[16] = {0};
+		dtostrf(BME280_get_humidity(), 4, 2, hum);
 		
 		setCursor(0, 0);
-		
 		writeString(temp);
 		writeChar(0xDF);
 		writeString("C");
+		
+		setCursor(1, 0);
+		writeString(press);
+		writeString(" bar");
+		
+		/*
+		setCursor(1, 0);
+		writeString(hum);
+		writeString(" %rh");
+		*/
+		
+		
 		setCursor(3,17);
 		
 		_delay_ms(100);
